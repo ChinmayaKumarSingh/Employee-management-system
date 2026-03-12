@@ -89,5 +89,10 @@ DELETE /employees/{id}
 ---
 
 ## 👨‍💻 Author
+## API Testing
+
+### Get Employees API
+
+![Get Employees](screenshots/api-get-employees.png)
 
 Java Backend Developer
