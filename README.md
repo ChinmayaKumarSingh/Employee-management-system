@@ -47,7 +47,15 @@ src
 ---
 
 ## 🔗 API Endpoints
+## 📸 API Testing (Postman)
 
+### Get Employees API
+
+![Get Employees](screenshots/api-get-employees.png)
+
+### Add Employee API
+
+![Add Employee](screenshots/api-add-employee.png)
 ### Get All Employees
 
 ```
