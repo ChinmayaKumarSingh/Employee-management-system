@@ -1,4 +1,4 @@
-![Employee Management System](assets/project-banner.png)
+![Employee Management System](assets/banner.png)
 # Employee Management System
 
 A backend REST API built using Spring Boot for managing employee records.  
