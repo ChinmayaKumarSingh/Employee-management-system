@@ -105,3 +105,9 @@ DELETE /employees/{id}
 ## 👨‍💻 Author
 
 Java Backend Developer
+
+## 📬 Postman Collection
+
+You can test the APIs using the Postman collection below.
+
+[Download Postman Collection](postman/employee-management-api.postman_collection.json)
