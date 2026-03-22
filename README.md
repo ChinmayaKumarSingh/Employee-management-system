@@ -1,113 +1,220 @@
-![Employee Management System](assets/project-banner.png.jpg)
-# Employee Management System
+# 👨‍💼 Employee Management System API
 
-A backend REST API built using Spring Boot for managing employee records.  
-This project demonstrates a layered architecture using Controller, Service, and Repository layers.
+![Java](https://img.shields.io/badge/Java-17-orange)
+![SpringBoot](https://img.shields.io/badge/SpringBoot-Backend-green)
+![REST API](https://img.shields.io/badge/API-REST-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
----
+An **Employee Management System REST API** built using **Java and Spring Boot** that allows organizations to manage employee records efficiently.
 
-## 🚀 Features
-
-- Add Employee
-- Get All Employees
-- Delete Employee
-- RESTful API Design
-- Layered Backend Architecture
+This backend system demonstrates **CRUD operations, REST API development, and enterprise backend architecture**.
 
 ---
 
-## 🛠 Tech Stack
+# 🌐 Live API
 
-- Java
-- Spring Boot
-- Spring Data JPA
-- MySQL
-- Maven
+Test the deployed API here:
+
+https://employee-management-api-service.onrender.com/employees
+
+Use Postman or Curl to interact with the API endpoints.
+
+```
+
+# ✨ Features
+
+✔ Add new employees
+✔ View all employees
+✔ Get employee details by ID
+✔ Update employee information
+✔ Delete employee records
+✔ RESTful API design
+✔ Controller-Service architecture
+
+```
+
+# 🛠 Tech Stack
+
+| Technology      | Usage                 |
+| --------------- | --------------------- |
+| Java 17         | Programming Language  |
+| Spring Boot     | Backend Framework     |
+| Spring Data JPA | ORM                   |
+| Maven           | Build Tool            |
+| REST API        | Backend Communication |
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
-src
- └── main
-     └── java
-         └── com.example.ems
-             ├── controller
-             │    └── EmployeeController.java
-             ├── model
-             │    └── Employee.java
-             ├── repository
-             │    └── EmployeeRepository.java
-             ├── service
-             │    └── EmployeeService.java
-             └── EmployeeManagementApplication.java
+```id="y1q3nt"
+employee-management-system
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.employee
+│   │   │        ├── controller
+│   │   │        ├── service
+│   │   │        ├── repository
+│   │   │        ├── model
+│   │   │        └── EmployeeManagementApplication.java
+│   │   │
+│   │   └── resources
+│   │        └── application.properties
+│
+├── pom.xml
+└── README.md
 ```
 
 ---
 
-## 🔗 API Endpoints
-## 📸 API Testing (Postman)
+# 🏗 System Architecture
 
-### Get Employees API
-
-![Get Employees](screenshots/api-get-employees.png)
-
-### Add Employee API
-
-![Add Employee](screenshots/api-add-employee.png)
-### Get All Employees
-
+```id="agf3a8"
+Client / Web Application
+        |
+        | HTTP Request
+        v
+Spring Boot Controller
+(EmployeeController)
+        |
+        v
+Service Layer
+(EmployeeService)
+        |
+        v
+Repository Layer
+(Spring Data JPA)
+        |
+        v
+Database
+        |
+        v
+API Response
 ```
-GET /employees
+
+---
+
+# 🔄 Request Flow
+
+```id="ux5sos"
+Client Request
+      |
+      v
+Controller Layer
+      |
+      v
+Service Layer
+      |
+      v
+Process Employee Data
+      |
+      v
+Database Operation
+      |
+      v
+Return API Response
 ```
-## API Testing
 
-### Get Employees API
+---
 
-![Get Employees](screenshots/api-get-employees.png)
+# 🌐 API Endpoints
 
+| Method | Endpoint        | Description          |
+| ------ | --------------- | -------------------- |
+| GET    | /employees      | Get all employees    |
+| GET    | /employees/{id} | Get employee details |
+| POST   | /employees      | Add new employee     |
+| PUT    | /employees/{id} | Update employee      |
+| DELETE | /employees/{id} | Delete employee      |
 
-### Add Employee
+---
 
-```
+# 📦 Example Request
+
+### Create Employee
+
 POST /employees
-```
 
-Example Request Body
-
-```
+```json id="2foj3p"
 {
- "name": "John Doe",
- "email": "john@email.com",
- "department": "IT"
+ "name": "Rahul Sharma",
+ "email": "rahul@example.com",
+ "department": "Engineering",
+ "salary": 60000
 }
 ```
 
-### Delete Employee
+---
 
+# 📦 Example Response
+
+### Success Response
+
+```id="fy6a9y"
+Employee created successfully
 ```
-DELETE /employees/{id}
+
+### Error Response
+
+```id="6pn4u2"
+Employee not found
 ```
 
 ---
 
-## 📌 Future Improvements
+# ▶ Run Locally
 
-- Update Employee API
-- Employee Search API
-- Pagination Support
-- JWT Authentication
-- Role Based Access Control
+### Clone repository
+
+```id="g2txdd"
+git clone https://github.com/ChinmayaKumarSingh/Employee-management-system.git
+```
+
+### Navigate to project
+
+```id="bfb3je"
+cd Employee-management-system
+```
+
+### Run application
+
+```id="40p6l1"
+mvn spring-boot:run
+```
 
 ---
 
-## 👨‍💻 Author
+# 🧪 Test API using Curl
 
-Java Backend Developer
+### Get all employees
 
-## 📬 Postman Collection
+```id="uql22b"
+curl https://employee-management-api-service.onrender.com/employees
+```
 
-You can test the APIs using the Postman collection below.
+### Create employee
 
-[Download Postman Collection](postman/employee-management-api.postman_collection.json)
+```id="3f6u3e"
+curl -X POST https://employee-management-api-service.onrender.com/employees \
+-H "Content-Type: application/json" \
+-d '{"name":"John Doe","email":"john@example.com","department":"IT","salary":50000}'
+```
+
+---
+
+# 📈 Future Improvements
+
+• Authentication using JWT
+• Role-based access control
+• Pagination and filtering
+• Swagger API documentation
+• Docker containerization
+
+---
+
+# 👨‍💻 Author
+
+**Chinmaya Singh**
+
